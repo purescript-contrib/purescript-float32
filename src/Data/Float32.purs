@@ -1,9 +1,13 @@
 module Data.Float32
-  ( Float32, fromNumber, toNumber
+  ( Float32, fromNumber, fromNumber', toNumber
   ) where
 
-import Prelude (class Eq, class Ord, class Show, class Semiring, class Ring, class Bounded, class EuclideanRing, class CommutativeRing, class DivisionRing)
+import Prelude
+  ( class Eq, class Ord, class Show, class Semiring, class Ring, class Bounded, class EuclideanRing
+  , class CommutativeRing, class DivisionRing
+  , top, bottom, (==), (||))
 import Data.Generic.Rep (class Generic)
+import Data.Maybe (Maybe (..))
 
 newtype Float32 = Float32 Number
 
@@ -20,7 +24,19 @@ derive newtype instance showFloat32 :: Show Float32
 
 
 -- | Uses `Math.fround()` to convert to a 32bit float
-foreign import fromNumber :: Number -> Float32
+fromNumber :: Number -> Maybe Float32
+fromNumber x =
+  let r = fromNumberImpl x
+  in  if r == top || r == bottom then Nothing else Just (Float32 r)
+
+-- | Casts to `0` when outside the range.
+fromNumber' :: Number -> Float32
+fromNumber' x = case fromNumber x of
+  Nothing -> Float32 0.0
+  Just y -> y
+
+
+foreign import fromNumberImpl :: Number -> Number
 
 toNumber :: Float32 -> Number
 toNumber (Float32 x) = x
