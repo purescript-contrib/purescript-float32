@@ -19,8 +19,14 @@ derive newtype instance ringFloat32 :: Ring Float32
 derive newtype instance commutativeringFloat32 :: CommutativeRing Float32
 derive newtype instance euclideanringFloat32 :: EuclideanRing Float32
 derive newtype instance divisionringFloat32 :: DivisionRing Float32
-derive newtype instance boundedFloat32 :: Bounded Float32
 derive newtype instance showFloat32 :: Show Float32
+instance boundedFloat32 :: Bounded Float32 where
+  top = float32Top
+  bottom = float32Bottom
+
+
+foreign import float32Top :: Float32
+foreign import float32Bottom :: Float32
 
 
 -- | Uses `Math.fround()` to convert to a 32bit float
