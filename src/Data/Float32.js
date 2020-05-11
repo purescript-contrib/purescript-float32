@@ -13,7 +13,7 @@ exports.fromNumberImpl = function fromNumberImpl (x) {
             return Number.NEGATIVE_INFINITY;
         } else {
             var r = new Float32Array(1);
-            r[0] = s;
+            r[0] = x;
             return r[0];
         }
     }
