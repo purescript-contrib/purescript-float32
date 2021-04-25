@@ -1,10 +1,13 @@
-{-
-Welcome to a Spago project!
-You can edit this file as you like.
--}
 { name = "float32"
+, license = "BSD-3-Clause"
 , dependencies =
-  [ "console", "effect", "generics-rep", "prelude", "psci-support", "quickcheck-laws" ]
+  [ "effect"
+  , "gen"
+  , "maybe"
+  , "prelude"
+  , "psci-support"
+  ]
 , packages = ./packages.dhall
-, sources = [ "src/**/*.purs", "test/**/*.purs" ]
+, sources = [ "src/**/*.purs" ]
+, repository = "https://github.com/jamesdbrock/purescript-float32.git"
 }
