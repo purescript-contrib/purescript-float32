@@ -1,0 +1,27 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Set up a PureScript toolchain
+        uses: purescript-contrib/setup-purescript@main
+
+      - name: Cache PureScript dependencies
+        uses: actions/cache@v2
+        with:
+          key: ${{ runner.os }}-spago-${{ hashFiles('**/*.dhall') }}
+          path: |
+            .spago
+            output
+
+      - name: Run Test
+        run: spago -x test.dhall test
+
