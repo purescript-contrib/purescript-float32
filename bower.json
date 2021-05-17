@@ -1,21 +1,23 @@
 {
-  "name": "purescript-float32",
-  "ignore": [
-    "**/.*",
-    "node_modules",
-    "bower_components",
-    "output"
-  ],
-  "license": "BSD-3-Clause",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/athanclark/purescript-float32.git"
-  },
-  "dependencies": {
-    "purescript-prelude": "^4.1.0",
-    "purescript-generics-rep": "^6.1.0"
-  },
-  "devDependencies": {
-    "purescript-psci-support": "^4.0.0"
-  }
+    "name": "purescript-float32",
+    "license": [
+        "BSD-3-Clause"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/jamesdbrock/purescript-float32.git"
+    },
+    "ignore": [
+        "**/.*",
+        "node_modules",
+        "bower_components",
+        "output"
+    ],
+    "dependencies": {
+        "purescript-effect": "^v3.0.0",
+        "purescript-gen": "^v3.0.0",
+        "purescript-maybe": "^v5.0.0",
+        "purescript-prelude": "^v5.0.0",
+        "purescript-psci-support": "^v5.0.0"
+    }
 }
