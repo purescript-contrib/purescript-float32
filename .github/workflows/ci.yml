@@ -2,7 +2,9 @@ name: CI
 
 on:
   push:
+    branches: [main]
   pull_request:
+    branches: [main]
 
 jobs:
   build:
@@ -22,6 +24,11 @@ jobs:
             .spago
             output
 
-      - name: Run Test
-        run: spago -x test.dhall test
+      - name: Install dependencies
+        run: spago install
 
+      - name: Build source
+        run: spago build --no-install --purs-args '--censor-lib --strict'
+
+      - name: Run tests
+        run: spago test --no-install
