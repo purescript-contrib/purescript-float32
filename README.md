@@ -1,11 +1,17 @@
-# Float32
+# float32
 
 [![CI](https://github.com/purescript-contrib/purescript-float32/workflows/CI/badge.svg?branch=main)](https://github.com/purescript-contrib/purescript-float32/actions?query=workflow%3ACI+branch%3Amain)
 [![Release](https://img.shields.io/github/release/purescript-contrib/purescript-float32.svg)](https://github.com/purescript-contrib/purescript-float32/releases)
 [![Pursuit](https://pursuit.purescript.org/packages/purescript-float32/badge)](https://pursuit.purescript.org/packages/purescript-float32)
 [![Maintainer: jamesdbrock](https://img.shields.io/badge/maintainer-jamesdbrock-teal.svg)](https://github.com/jamesdbrock)
 
-The library summary hasn't been written yet (contributions are welcome!). The library summary describes the library's purpose in one to three sentences.
+Provides the
+[32-bit single-precision floating-point](https://en.wikipedia.org/wiki/Single-precision_floating-point_format)
+data type `Float32` and operations.
+
+`Float32` is a `newtype` wrapper around `Number`, where
+entering into the type can only be done with
+[`Math.fround()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/fround).
 
 ## Installation
 
@@ -41,3 +47,11 @@ You can contribute to `float32` in several ways:
 2. If you would like to contribute code, tests, or documentation, please [read the contributor guide](./CONTRIBUTING.md). It's a short, helpful introduction to contributing to this library, including development instructions.
 
 3. If you have written a library, tutorial, guide, or other resource based on this package, please share it on the [PureScript Discourse](https://discourse.purescript.org)! Writing libraries and learning resources are a great way to help this library succeed.
+
+## Development
+
+Run the tests with
+
+```sh
+spago -x test.dhall test
+```

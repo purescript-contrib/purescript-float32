@@ -4,10 +4,11 @@ Notable changes to this project are documented in this file. The format is based
 
 ## [Unreleased]
 
-Breaking changes (😱!!!):
+## v1.0.0 2021-06-23
 
-New features:
+Thank you Athan Clark for donating this package to __purescript-contrib__.
 
-Bugfixes:
+Remove the `Generic` instance of `Float32`, it’s no longer needed. We don't
+expect this change to break any dependent code.
 
-Other improvements:
+Move the testing dependencies to `test.dhall`.

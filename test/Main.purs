@@ -1,15 +1,13 @@
 module Test.Main where
 
 import Prelude
+
 import Data.Float32 (Float32)
 import Data.Float32.Gen (chooseFloat32)
-
 import Effect (Effect)
-import Type.Proxy (Proxy (..))
 import Test.QuickCheck (class Arbitrary)
-import Test.QuickCheck.Laws.Data
-  ( checkBounded, checkEq, checkOrd, checkSemiring, checkRing, checkCommutativeRing
-  , checkDivisionRing, checkEuclideanRing)
+import Test.QuickCheck.Laws.Data (checkBounded, checkCommutativeRing, checkEq, checkOrd, checkRing, checkSemiring)
+import Type.Proxy (Proxy(..))
 
 newtype Float32' = Float32' Float32
 derive newtype instance eqFloat32' :: Eq Float32'

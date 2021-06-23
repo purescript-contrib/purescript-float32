@@ -5,7 +5,7 @@
     ],
     "repository": {
         "type": "git",
-        "url": "https://github.com/jamesdbrock/purescript-float32.git"
+        "url": "https://github.com/purescript-contrib/purescript-float32.git"
     },
     "ignore": [
         "**/.*",
@@ -14,7 +14,6 @@
         "output"
     ],
     "dependencies": {
-        "purescript-effect": "^v3.0.0",
         "purescript-gen": "^v3.0.0",
         "purescript-maybe": "^v5.0.0",
         "purescript-prelude": "^v5.0.0",
