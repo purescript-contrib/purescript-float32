@@ -3,6 +3,7 @@
 [![CI](https://github.com/purescript-contrib/purescript-float32/workflows/CI/badge.svg?branch=main)](https://github.com/purescript-contrib/purescript-float32/actions?query=workflow%3ACI+branch%3Amain)
 [![Release](https://img.shields.io/github/release/purescript-contrib/purescript-float32.svg)](https://github.com/purescript-contrib/purescript-float32/releases)
 [![Pursuit](https://pursuit.purescript.org/packages/purescript-float32/badge)](https://pursuit.purescript.org/packages/purescript-float32)
+[![Maintainer: athanclark](https://img.shields.io/badge/maintainer-athanclark-teal.svg)](https://github.com/athanclark)
 [![Maintainer: jamesdbrock](https://img.shields.io/badge/maintainer-jamesdbrock-teal.svg)](https://github.com/jamesdbrock)
 
 Provides the
@@ -55,3 +56,4 @@ Run the tests with
 ```sh
 spago -x test.dhall test
 ```
+
