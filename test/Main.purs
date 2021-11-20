@@ -10,6 +10,7 @@ import Test.QuickCheck.Laws.Data (checkBounded, checkCommutativeRing, checkEq, c
 import Type.Proxy (Proxy(..))
 
 newtype Float32' = Float32' Float32
+
 derive newtype instance eqFloat32' :: Eq Float32'
 derive newtype instance ordFloat32' :: Ord Float32'
 derive newtype instance boundedFloat32' :: Bounded Float32'
@@ -21,26 +22,17 @@ derive newtype instance euclideanRingFloat32' :: EuclideanRing Float32'
 instance arbitraryFloat32' :: Arbitrary Float32' where
   arbitrary = Float32' <$> chooseFloat32 bottom top
 
-
 main :: Effect Unit
 main = do
-  let p :: Proxy Float32'
-      p = Proxy
+  let
+    p :: Proxy Float32'
+    p = Proxy
   checkBounded p
   checkEq p
   checkOrd p
   checkSemiring p
   checkRing p
   checkCommutativeRing p
-  -- checkDivisionRing p -- isn't a division ring because 32bit float isn't perfectly precise
-  -- checkEuclideanRing p -- likewise for euclidean ring
-
-
-
-
-
-
-
-
-
+-- checkDivisionRing p -- isn't a division ring because 32bit float isn't perfectly precise
+-- checkEuclideanRing p -- likewise for euclidean ring
 
