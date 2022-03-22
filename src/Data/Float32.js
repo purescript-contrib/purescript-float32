@@ -1,6 +1,3 @@
-"use strict";
-
-
 export const float32Top = 3.40282e38;
 export const float32Bottom = -3.40282e38;
 
