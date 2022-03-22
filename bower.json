@@ -18,5 +18,8 @@
     "purescript-maybe": "master",
     "purescript-prelude": "master",
     "purescript-psci-support": "master"
+  },
+  "devDependencies": {
+    "purescript-quickcheck-laws": "main"
   }
 }
