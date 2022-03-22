@@ -1,8 +1,8 @@
 "use strict";
 
 
-export var float32Top = 3.40282e38;
-export var float32Bottom = -3.40282e38;
+export const float32Top = 3.40282e38;
+export const float32Bottom = -3.40282e38;
 
 export function fromNumberImpl(x) {
     if (typeof Math.fround !== 'undefined') {
