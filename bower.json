@@ -16,10 +16,10 @@
   "dependencies": {
     "purescript-gen": "master",
     "purescript-maybe": "master",
-    "purescript-prelude": "master",
-    "purescript-psci-support": "master"
+    "purescript-prelude": "master"
   },
   "devDependencies": {
+    "purescript-psci-support": "master",
     "purescript-quickcheck-laws": "main"
   }
 }
