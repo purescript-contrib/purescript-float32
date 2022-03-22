@@ -1,9 +1,10 @@
 "use strict";
 
 
-exports.float32Top = 3.40282e38;
-exports.float32Bottom = -3.40282e38;
-exports.fromNumberImpl = function fromNumberImpl (x) {
+export var float32Top = 3.40282e38;
+export var float32Bottom = -3.40282e38;
+
+export function fromNumberImpl(x) {
     if (typeof Math.fround !== 'undefined') {
         return Math.fround(x);
     } else {
@@ -17,5 +18,5 @@ exports.fromNumberImpl = function fromNumberImpl (x) {
             return r[0];
         }
     }
-};
+}
 
