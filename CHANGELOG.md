@@ -4,6 +4,9 @@ Notable changes to this project are documented in this file. The format is based
 
 ## [Unreleased]
 
+Breaking changes:
+- Migrate FFI to ES modules (#8 by @JordanMartinez)
+
 ## v1.0.0 2021-06-23
 
 Thank you Athan Clark for donating this package to __purescript-contrib__.
