@@ -5,6 +5,16 @@ Notable changes to this project are documented in this file. The format is based
 ## [Unreleased]
 
 Breaking changes:
+
+New features:
+
+Bugfixes:
+
+Other improvements:
+
+## [v2.0.0](https://github.com/purescript-contrib/purescript-float32/releases/tag/v2.0.0) - 2022-04-27
+
+Breaking changes:
 - Migrate FFI to ES modules (#8 by @JordanMartinez)
 
 ## v1.0.0 2021-06-23
