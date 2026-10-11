@@ -54,6 +54,5 @@ You can contribute to `float32` in several ways:
 Run the tests with
 
 ```sh
-spago -x test.dhall test
+spago test
 ```
-
