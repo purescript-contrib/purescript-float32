@@ -11,7 +11,11 @@ New features:
 Bugfixes:
 
 Other improvements:
-- Migrate to registry-backed Spago and update CI tooling.
+
+## [v2.0.1](https://github.com/purescript-contrib/purescript-float32/releases/tag/v2.0.1) - 2026-10-11
+
+Other improvements:
+- Migrate to registry-backed Spago and update CI tooling (#13).
 
 ## [v2.0.0](https://github.com/purescript-contrib/purescript-float32/releases/tag/v2.0.0) - 2022-04-27
 
